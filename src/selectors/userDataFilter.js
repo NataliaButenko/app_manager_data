@@ -1,10 +1,10 @@
 export const userDataFilter = (state) => {
   return state.users.reduce((done, user) => {
-    let filterByLast_name = user.lastName.includes(state.search);
-    let filterByFirst_name = user.firstName.includes(state.search);
-    let filterByAge = (user.age + '').includes(state.search);
-    let filterByPhone = (user.phone + '').includes(state.search);
-    let filterByEmail = user.email.includes(state.search);
+    let filterByLast_name = user.lastName.toLowerCase().includes(state.search.toLowerCase());
+    let filterByFirst_name = user.firstName.toLowerCase().includes(state.search.toLowerCase());
+    let filterByAge = (user.age + '').toLowerCase().includes(state.search.toLowerCase());
+    let filterByPhone = (user.phone + '').toLowerCase().includes(state.search.toLowerCase());
+    let filterByEmail = user.email.toLowerCase().includes(state.search.toLowerCase());
     if(filterByLast_name) {
       done.push(user);
     } else if(filterByFirst_name) {

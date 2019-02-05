@@ -16,14 +16,6 @@
   border-color: red !important;
 }
 
-.messageError {
-  width: 300px;
-  position: fixed;
-  right: 0px;
-  margin-top: 20px;
-  margin-right: 20px;
-}
-
 .messageErr {
   margin-top: 5px;
 }

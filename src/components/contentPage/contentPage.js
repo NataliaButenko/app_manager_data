@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { Table, Input, Button, Grid, Popup } from 'semantic-ui-react';
-import "./contentPage.css";
 import { search } from "../../store/actions/search-action/search";
 import connect from "react-redux/es/connect/connect";
 import { userDataFilter } from "../../selectors/userDataFilter";

@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { Link } from "react-router-dom";
 import { myInput } from "../field";
-import { validate } from "../validation";
+//import { validate } from "../validation";
+import { required, number, rightAge, email, password, confirm_password, minLength6, phoneNumber } from "../validation";
 
 class RegistrationForm extends Component {
   render () {
@@ -15,7 +16,7 @@ class RegistrationForm extends Component {
           component={ myInput }
           type="text"
           placeholder="Last name"
-          className="field"
+          validate={ required }
         />
         <Field
           name="firstName"
@@ -23,7 +24,7 @@ class RegistrationForm extends Component {
           component={ myInput }
           type="text"
           placeholder="First name"
-          className="field"
+          validate={ required }
         />
         <Field
           name="age"
@@ -31,6 +32,7 @@ class RegistrationForm extends Component {
           component={ myInput }
           type="number"
           placeholder="Age"
+          validate={ [required, number , rightAge] }
         />
         <Field
           name="phone"
@@ -38,6 +40,7 @@ class RegistrationForm extends Component {
           component={ myInput }
           type="number"
           placeholder="Phone"
+          validate={ [required, number, phoneNumber] }
         />
         <Field
           name="email"
@@ -45,6 +48,7 @@ class RegistrationForm extends Component {
           component={ myInput }
           type="email"
           placeholder="Email"
+          validate={ [required, email] }
         />
         <Field
           name="password"
@@ -52,6 +56,7 @@ class RegistrationForm extends Component {
           component={ myInput }
           type="password"
           placeholder="Password"
+          validate={ [required, minLength6, password] }
         />
         <Field
           name="confirm_password"
@@ -59,6 +64,7 @@ class RegistrationForm extends Component {
           component={ myInput }
           type="password"
           placeholder="Confirm password"
+          validate={ [required, minLength6, confirm_password] }
         />
         <button className="ui button" type="submit" label="submit">Зарегистрироваться</button>
         <Link to='/content-page'><button className="ui button" type="button">Вернуться</button></Link>
@@ -69,7 +75,7 @@ class RegistrationForm extends Component {
 
 RegistrationForm = reduxForm ({
   form: 'registration',
-  validate
+  //validate
 }) (RegistrationForm);
 
 export default RegistrationForm;

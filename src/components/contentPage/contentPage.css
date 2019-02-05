@@ -29,3 +29,7 @@ i.plus {
 .ui.grid>.column:not(.row) {
   padding: 8px !important;
 }
+
+button  {
+  outline: none;
+}

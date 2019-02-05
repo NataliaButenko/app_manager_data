@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import "./loginPage.css";
 import { Link } from "react-router-dom";
 import { FormErrors } from "../formError/formError";
 import connect from "react-redux/es/connect/connect";

@@ -1,0 +1,6 @@
+@import 'components/contentPage/contentPage.css';
+@import "components/editUserPage/editUserPage.css";
+@import "components/forms/field.css";
+@import "components/loginPage/loginPage.css";
+@import "components/registrationPage/registrationPage.css";
+@import "components/forms/editForm/editForm.css";

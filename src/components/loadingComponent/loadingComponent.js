@@ -5,8 +5,8 @@ import connect from "react-redux/es/connect/connect";
 export class LoadingComponent extends Component {
   render() {
     return (
-        <Dimmer active>
-          <Loader />
+        <Dimmer active inverted>
+          <Loader inverted size='large' >Loading...</Loader>
         </Dimmer>
     )
   }

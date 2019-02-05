@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import "./editUserPage.css";
 import connect from "react-redux/es/connect/connect";
-import EditForm from '../../forms/editForm/editForm';
+import EditForm from '../forms/editForm/editForm';
 import {updateUserByIdAsync} from "../../store/actions/users-action/update-user";
 
 export class EditUserPage extends Component {
@@ -38,12 +37,13 @@ export class EditUserPage extends Component {
 
   submit = () => {
     const {updateUserByIdAsync, form} = this.props;
+    //console.log(form.edit.values);
     updateUserByIdAsync(form.edit.values);
   };
 
   render() {
     return (
-      <div className="registrationForm">
+      <div className="editUserForm">
         <h1>Редактировать пользователя</h1>
         <EditForm onSubmit={this.submit}
                   initialValues={this.getInitialValues()}/>

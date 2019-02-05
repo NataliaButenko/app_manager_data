@@ -1,0 +1,12 @@
+div.content.active {
+  margin-top: 2px !important;
+}
+
+.accordion .title {
+  margin: 10px 0;
+}
+
+.errorField {
+  border: 1px solid red;
+  border-radius: 5px;
+}

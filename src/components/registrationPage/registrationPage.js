@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import "./registrationPage.css";
+// import "./registrationPage.css";
 import { connect } from "react-redux";
 import { registerUserAsync } from "../../store/actions/users-action/register-user";
-import RegistrationForm from '../../forms/registrationForm/registrationForm';
+import RegistrationForm from '../forms/registrationForm/registrationForm';
 
 export class RegistrationPage extends Component {
   constructor() {

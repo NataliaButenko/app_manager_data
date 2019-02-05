@@ -12,22 +12,3 @@
   margin: auto;
   overflow: auto;
 }
-
-.error {
-  display: block;
-  background-color: pink;
-  color: red;
-  border-radius: 10px;
-  margin: 10px 0;
-  padding: 5px;
-  font-size: 15px;
-  text-align: center;
-}
-
-.field {
-  margin-bottom: 10px;
-}
-
-.errorField {
-  border-color: red !important;
-}
